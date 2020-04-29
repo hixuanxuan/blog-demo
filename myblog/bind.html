@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS bind | Xuanxuan&#39;s blog</title>
+    <meta name="description" content="我的个人网站">
+    <link rel="icon" href="./rabbit.png">
+    
+    <link rel="preload" href="/blog-demo/assets/css/0.styles.a4c10295.css" as="style"><link rel="preload" href="/blog-demo/assets/js/app.1d89a26a.js" as="script"><link rel="preload" href="/blog-demo/assets/js/2.e056be92.js" as="script"><link rel="preload" href="/blog-demo/assets/js/8.16be45ff.js" as="script"><link rel="prefetch" href="/blog-demo/assets/js/10.4bdca461.js"><link rel="prefetch" href="/blog-demo/assets/js/11.f3631a30.js"><link rel="prefetch" href="/blog-demo/assets/js/12.3baef48e.js"><link rel="prefetch" href="/blog-demo/assets/js/13.9da9935f.js"><link rel="prefetch" href="/blog-demo/assets/js/14.eeaa6772.js"><link rel="prefetch" href="/blog-demo/assets/js/15.8c2f0fd5.js"><link rel="prefetch" href="/blog-demo/assets/js/16.6f1b9cd3.js"><link rel="prefetch" href="/blog-demo/assets/js/17.a21e6f1b.js"><link rel="prefetch" href="/blog-demo/assets/js/18.9a0a4250.js"><link rel="prefetch" href="/blog-demo/assets/js/19.94c67f3b.js"><link rel="prefetch" href="/blog-demo/assets/js/20.aff2ca1c.js"><link rel="prefetch" href="/blog-demo/assets/js/21.e5295bc9.js"><link rel="prefetch" href="/blog-demo/assets/js/22.74b3cda7.js"><link rel="prefetch" href="/blog-demo/assets/js/23.9cb487fb.js"><link rel="prefetch" href="/blog-demo/assets/js/24.6e8dd019.js"><link rel="prefetch" href="/blog-demo/assets/js/25.1d8f9bed.js"><link rel="prefetch" href="/blog-demo/assets/js/26.40eae98a.js"><link rel="prefetch" href="/blog-demo/assets/js/27.b7aaa278.js"><link rel="prefetch" href="/blog-demo/assets/js/28.53c77287.js"><link rel="prefetch" href="/blog-demo/assets/js/29.1f3af06f.js"><link rel="prefetch" href="/blog-demo/assets/js/3.a70938db.js"><link rel="prefetch" href="/blog-demo/assets/js/30.5f5b1d34.js"><link rel="prefetch" href="/blog-demo/assets/js/31.3a9b3f3a.js"><link rel="prefetch" href="/blog-demo/assets/js/32.e00d4b9b.js"><link rel="prefetch" href="/blog-demo/assets/js/33.39317c8a.js"><link rel="prefetch" href="/blog-demo/assets/js/34.f1a0629c.js"><link rel="prefetch" href="/blog-demo/assets/js/35.b9538080.js"><link rel="prefetch" href="/blog-demo/assets/js/36.2d204a03.js"><link rel="prefetch" href="/blog-demo/assets/js/37.b72bb3d1.js"><link rel="prefetch" href="/blog-demo/assets/js/38.6a4765f0.js"><link rel="prefetch" href="/blog-demo/assets/js/39.76f36664.js"><link rel="prefetch" href="/blog-demo/assets/js/4.0f3eb812.js"><link rel="prefetch" href="/blog-demo/assets/js/40.cb590e60.js"><link rel="prefetch" href="/blog-demo/assets/js/41.6ce6059a.js"><link rel="prefetch" href="/blog-demo/assets/js/42.949c19e3.js"><link rel="prefetch" href="/blog-demo/assets/js/43.67e1bd45.js"><link rel="prefetch" href="/blog-demo/assets/js/44.c4e0b23d.js"><link rel="prefetch" href="/blog-demo/assets/js/45.4f7fee8b.js"><link rel="prefetch" href="/blog-demo/assets/js/46.0f5696db.js"><link rel="prefetch" href="/blog-demo/assets/js/47.b5d59a1d.js"><link rel="prefetch" href="/blog-demo/assets/js/48.f519ab65.js"><link rel="prefetch" href="/blog-demo/assets/js/5.d6f30415.js"><link rel="prefetch" href="/blog-demo/assets/js/6.5f6ad1ed.js"><link rel="prefetch" href="/blog-demo/assets/js/7.94c09ca7.js"><link rel="prefetch" href="/blog-demo/assets/js/9.6d10ac90.js">
+    <link rel="stylesheet" href="/blog-demo/assets/css/0.styles.a4c10295.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog-demo/" class="home-link router-link-active"><!----> <span class="site-name">Xuanxuan's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog-demo/accumulate/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog-demo/algorithm/" class="nav-link">算法题库</a></div><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  微博
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog-demo/accumulate/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/blog-demo/algorithm/" class="nav-link">算法题库</a></div><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  微博
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog-demo/" class="sidebar-link">简介</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>知识点整理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react源码简单阅读</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>考点</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js-bind"><a href="#js-bind" class="header-anchor">#</a> JS bind</h1> <h2 id="词法作用域"><a href="#词法作用域" class="header-anchor">#</a> 词法作用域</h2> <p>javascript 采用的是词法作用域，函数的作用域再函数定义的时候就确定了；而与词法相对应的是动态作用域，函数的作用域是在函数调用的时候决定的。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> value<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> value<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>javascript采用的是静态作用域，执行foo函数，先从foo函数内部查找value，如果没有，根据书写位置，查找上一层的代码，也就是value=1，所以打印1.
+假如是动态作用域的，依然先从函数内部的变量寻找value，如果没，则从调用函数的作用域查找value，结果会打印2.</p> <h2 id="执行顺序"><a href="#执行顺序" class="header-anchor">#</a> 执行顺序</h2> <p>1=&gt; 2=&gt; 3=&gt;入栈，3=》2=》2=》1出栈。</p> <h2 id="变量对象"><a href="#变量对象" class="header-anchor">#</a> 变量对象</h2> <ul><li>变量对象（Variable object VO）</li> <li>作用域链（Scope Chain）</li> <li>this</li></ul> <h3 id="全局上下文"><a href="#全局上下文" class="header-anchor">#</a> 全局上下文</h3> <p>全局上下文中的变量对象就是全局对象
+在客户端 JavaScript 中，全局对象是 window 对象，通过 window 对象的 window 属性指向自身。</p> <h3 id="函数上下文"><a href="#函数上下文" class="header-anchor">#</a> 函数上下文</h3> <ul><li>在函数上下文中，我们用活动对象，（activation object AO）表示变量对象</li> <li>变量对象是 ECMAScript 规范术语。在一个执行上下文中，变量对象才被激活。只有激活的变量对象，其各种属性才能被访问。</li> <li>活动对象和变量对象其实是一个东西，只是变量对象是规范上或者是引擎上实现的，不可在javascript环境中访问，只有当进入一个执行上下文中，这个执行上下文的变量对象才被激活，所以才叫activation object，而只有被激活的变量对象，也就是活动对象上的各种属性才能被访问。</li> <li>活动对象是在进入函数上下文时被创建的，它通过函数的argument属性初始化，argument属性值是Argument对象。</li></ul> <h2 id="执行过程"><a href="#执行过程" class="header-anchor">#</a> 执行过程</h2> <ol><li>进入执行上下文</li> <li>代码执行</li></ol> <h3 id="进入执行上下文"><a href="#进入执行上下文" class="header-anchor">#</a> 进入执行上下文</h3> <p>当进入执行上下文的时候，这时候还没有执行代码，变量对象会包括，</p> <ol><li>函数的所有形参（如果是函数上下文）
+<ul><li>由名称和对应值组成的一个变量对象的属性被创建</li> <li>没有实参，属性值为undefined。</li></ul></li> <li>函数声明
+<ul><li>由名称和对应值（函数对象function-object）组成一个变量对象的属性值被创建</li> <li>如果变量对象已经存在相同名称的属性，则完全替换这个属性。</li></ul></li> <li>变量声明
+<ul><li>由名称和变量（undefined）组成一个变量对象的属性被创建；</li> <li>如果变量名称跟已经声明的形式参数或者函数相同，则变量声明不会干扰已经存在的这类属性</li></ul></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token parameter">a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//声明外部函数</span>
+    <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  <span class="token comment">//声明局部变量，并赋值1</span>
+    <span class="token keyword">function</span> <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment">//声明内部函数</span>
+    <span class="token keyword">var</span> <span class="token function-variable function">d</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment">//声明局部变量，并赋值为匿名函数</span>
+    b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>  <span class="token comment">//修改变量b的值为2</span>
+<span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//调用函数，并传入实参值1</span>
+</code></pre></div><p>(1)在进入执行上下文后，这时候AO是</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">AO</span><span class="token operator">=</span><span class="token punctuation">{</span>
+    arguments<span class="token operator">:</span><span class="token punctuation">{</span>
+        <span class="token number">0</span><span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+        length<span class="token operator">:</span><span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    a<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token operator">:</span><span class="token keyword">undefined</span><span class="token punctuation">,</span>
+    c<span class="token operator">:</span>refrence to <span class="token keyword">function</span> <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    d<span class="token operator">:</span><span class="token keyword">undefined</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>(2)执行代码。在代码执行阶段会按顺序执行代码，这时可能会修改变量对象的值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">AO</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    arguments <span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token number">0</span> <span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>  <span class="token comment">//实参值</span>
+        length <span class="token operator">:</span> <span class="token number">1</span>  <span class="token comment">//实参长度</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+    a <span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>  <span class="token comment">//实参值</span>
+    b <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment">//初始化赋值</span>
+    <span class="token function-variable function">c</span> <span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token comment">//引用声明的函数c</span>
+    <span class="token function-variable function">d</span> <span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>  <span class="token comment">//引用函数表达式&quot;d&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="作用域链"><a href="#作用域链" class="header-anchor">#</a> 作用域链</h2> <p>简单来说，作用域就是变量与函数的可访问范围，通俗地讲，当声明一个函数时，局部作用域一级一级向上包起来，就是作用域链。</p> <ul><li>查找变量的时候，会从当前上下文的变量对象中去查找，如果没找到，会从父级（词法作用域的父级）上面查找，一直查到到全局上下文的变量对象，也就是全局对象，这样由多个执行上下文的变量对象构成的链表就叫作用域链。</li> <li>函数作用域在函数定义的时候就决定了</li> <li>因为函数有一个内部属性[[scope]],当函数创建的时候，就会保存所有父变量对象到其中，可以理解[[scope]]是所有父变量的层级链，但并不是完整的作用域链！</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 函数创建时，各自的[[scope]]为</span>
+foo<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token punctuation">[</span>scope<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    globalContext<span class="token punctuation">.</span>Vo
+<span class="token punctuation">}</span>
+bar<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token punctuation">[</span>scope<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    fooContext<span class="token punctuation">.</span>Ao<span class="token punctuation">,</span>
+    globalContext<span class="token punctuation">.</span>Vo
+<span class="token punctuation">}</span>
+<span class="token comment">// 这是伪代码，展示函数创建的时候干了什么</span>
+</code></pre></div><p>global在栈底，哪里都有，所有函数都能访问到window的变量，window的VO就是AO，AO是激活的VO也就是和Augument绑定的VO（针对于浏览器环境是window，针对于nodejs是Global）</p> <h2 id="函数激活"><a href="#函数激活" class="header-anchor">#</a> 函数激活</h2> <p>当函数激活（执行）的时候，进入的函数上下文，创建AO/VO的时候，会将活动对象添加到作用域链的前端，这时候执行上下文的作用域链，被成为ScopeChain。
+Scope=[[AO]].concat([[Scope]]);
+至此，作用域链就创建完毕了。
+（函数也是个对象，只是特殊的对象，有protoType，函数也可以当对象用（js忍者秘籍））</p> <h2 id="this"><a href="#this" class="header-anchor">#</a> this</h2> <p>谁调用就指向谁，谁.就是谁调用，</p> <h2 id="具体执行分析"><a href="#具体执行分析" class="header-anchor">#</a> 具体执行分析</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> scope <span class="token operator">=</span> <span class="token string">&quot;global scope&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">checkScope</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> scope<span class="token operator">=</span><span class="token string">&quot;local scope&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> scope<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">checkScope</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><ol><li>执行全局代码，创建全局上下文，全局上下文被压入上下文栈。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>ECStack <span class="token operator">=</span> <span class="token punctuation">[</span>
+    globalContext
+<span class="token punctuation">]</span>
+</code></pre></div><ol start="2"><li>初始化全局上下文，checkScope函数创建，保存作用域链到函数的内部属性[[scope]].(还是定义阶段)</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>globalContext <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token constant">VO</span><span class="token operator">:</span><span class="token punctuation">[</span>global<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    Scope<span class="token operator">:</span><span class="token punctuation">[</span>globalContext<span class="token punctuation">.</span><span class="token constant">VO</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token keyword">this</span><span class="token operator">:</span>globalContext<span class="token punctuation">.</span><span class="token constant">VO</span>
+<span class="token punctuation">]</span>
+checkScope<span class="token punctuation">.</span><span class="token punctuation">[</span><span class="token punctuation">[</span>scope<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+    globalContext<span class="token punctuation">.</span><span class="token constant">VO</span>
+<span class="token punctuation">]</span>
+</code></pre></div><ol start="3"><li>执行checkScope函数，创建函数的执行上下文，checkScope函数执行上下文被压入执行上下文栈。</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>ECStack <span class="token operator">=</span> <span class="token punctuation">[</span>
+    checkScopeContext<span class="token punctuation">,</span>
+    globalContext
+<span class="token punctuation">]</span>
+</code></pre></div><ol start="4"><li>checkScope执行上下文初始化，
+<ol><li>复制函数[[scope]]属性创建作用域链。</li> <li>用arguments创建活动对象</li> <li>初始化活动对象，（加入形参，函数声明，变量声明）</li> <li>将活动对象压入checkScope的作用域链顶端，同时f函数被创建了，保存作用域链到f函数的内部属性[[scope]]</li></ol> <div class="language- extra-class"><pre class="language-text"><code>checkscopeContext = {
+    AO:{
+        arguments:{
+            length:0
+        },
+        scope:undefined,
+        f:refrence to function f(){},
+    }
+        Scope:[AO, globalContext.VO],
+        this:undefined(非严格模式是window)
+}
+</code></pre></div></li> <li>执行f函数，创建f的执行上下文，f的执行上下文被压入栈（这时候上面的scope已经被赋值了）
+（执行阶段，才开始看函数里面都有啥）</li></ol> <div class="language- extra-class"><pre class="language-text"><code>ECStack = [
+    fContext,
+    checkscopeContext,
+    globalContext
+]
+</code></pre></div><ol start="6"><li>f函数的执行上下文初始化，
+<ol><li>复制函数[[scope]]属性创建作用域链。（这个就是父级的scope）</li> <li>用arguments创建活动对象</li> <li>初始化活动对象，（加入形参，函数声明，变量声明）</li> <li>活动对象f压入作用域链顶端
+（函数执行的时候，相当于把父级的scopechain存起来了）</li></ol> <div class="language- extra-class"><pre class="language-text"><code>fContext = [
+    AO:{
+        arguments:{
+            length:0
+        },
+
+    },
+    Scope:[fContext.AO,checkscopeContext.AO, globalContext.VO],
+    this:undefined
+]
+</code></pre></div></li> <li>函数执行，会沿着作用域去查找scope值，返回scope值</li> <li>f函数执行完毕了，f函数的执行上下文就会从上下文栈中弹出来。</li> <li>checkScope函数执行完毕，checkscope的执行上下文也从执行上下文栈中弹出来。</li></ol> <h2 id="解释器解析代码流程"><a href="#解释器解析代码流程" class="header-anchor">#</a> 解释器解析代码流程</h2> <ol><li>找到被调用函数的代码内容</li> <li>在执行function代码前，先创建执行上下文execution context</li> <li>进入创建阶段</li></ol> <ul><li>初始化 作用域链.</li> <li>创建 variable object:</li> <li>创建 arguments object；检查上下文获取入参，初始化形参名称和数值，并创建一个引用拷贝</li> <li>扫描上下文获取内部函数声明：</li> <li>对发现的每一个内部函数，都在variable object中创建一个和函数名一样的property，该property作为一个引用指针指向函数代码在内存中的地址</li> <li>如果在variable object中已经存在相同名称的property，那么相应的property会被重写</li> <li>扫描上下文获取内部变量声明：</li> <li>对发现的每一个内部变量声明，都在variable object中创建一个和变量名一样的property，并且将其初始化为 undefined
+如果在variable object中已经存在相同变量名称的property，那么就跳过，不做任何动作，继续扫描</li> <li>决定在上下文中&quot;this&quot; 的值</li></ul> <ol start="4"><li>激活/代码执行阶段:</li></ol> <ul><li>执行上下文中的函数代码，逐行运行JS代码，并给变量赋值</li></ul> <h2 id="function-prototype-bind"><a href="#function-prototype-bind" class="header-anchor">#</a> Function.prototype.bind()</h2> <h2 id="闭包"><a href="#闭包" class="header-anchor">#</a> 闭包</h2> <h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>能够访问自由变量的函数（MDN），闭包是有权访问另一个函数作用域变量中的函数（红宝书P178）；执行和定义不在同一个作用域（小黄书）。
+从实践的角度</p> <ol><li>即使创建他的上下文已经销毁，他依然存在（比如，内部函数从父函数中返回）</li> <li>在代码中引用自由变量
+例子：</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> scope <span class="token operator">=</span> <span class="token string">&quot;global scope&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">checkScope</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> scope<span class="token operator">=</span><span class="token string">&quot;local scope&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> scope<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> f<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> foo <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">checkScope</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>简要的执行过程</p> <ol><li>进入全局代码，创建全局上下文</li> <li>初始化全局上下文，并创建checkScope函数</li> <li>执行checkScope函数，创建函数的执行上下文，checkScope函数执行上下文被压入执行上下文栈。</li> <li>checkScope执行上下文初始化，创建变量对象，作用域链，this等（f函数作为变量对象已经被创建）</li> <li>checkScope执行完毕，他的执行上下文从执行上下文栈中弹出。（创建他的上下文已经销毁了，但是接下来仍然可以拿他的变量，他的变量仍然收不回去）</li> <li>执行f函数，创建f执行上下文，f执行上下文被压入执行上下文栈</li> <li>f函数执行完毕，f函数的执行上下文会从栈中弹出。</li></ol> <h3 id="谈谈对闭包的看法"><a href="#谈谈对闭包的看法" class="header-anchor">#</a> 谈谈对闭包的看法</h3> <p>闭包其实是结合了全局变量和局部变量的优点</p> <p>全局变量的好处就在于什么地方都能用，但是这样就会有个问题，全部变量的污染问题，你不知道在哪不小心改了，其他的引用这个变量的点都会受到影响</p> <p>局部变量就是定义在函数里的，他不能被倍的函数直接用，只能通过传参的一些方式</p> <p>闭包就解决了这个问题，即时在局部被定义的，但是还能在别的函数里面直接调用</p> <h2 id="call和apply的模拟实现"><a href="#call和apply的模拟实现" class="header-anchor">#</a> call和apply的模拟实现</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// call 和 apply 的模拟实现</span>
+<span class="token comment">// 已经是es3的方法，所以这里也使用es3的语法</span>
+
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">call2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> context <span class="token operator">=</span> context <span class="token operator">||</span> window<span class="token punctuation">;</span>
+    context<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'arguments['</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">']'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">'context.fn('</span> <span class="token operator">+</span> args <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 相当于生成context</span>
+    <span class="token keyword">delete</span> context<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// apply 第二个参数是数组</span>
+
+<span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">apply2</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> context <span class="token operator">=</span> context <span class="token operator">||</span> window<span class="token punctuation">;</span>
+    context<span class="token punctuation">.</span>fn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'arr['</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">']'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    result <span class="token operator">=</span> <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">'context.fn('</span> <span class="token operator">+</span> args <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="new的模拟实现"><a href="#new的模拟实现" class="header-anchor">#</a> New的模拟实现</h2> <h2 id=""><a href="#" class="header-anchor">#</a></h2> <p>实例的隐式原型等于构造函数的显式原型。
+对象有__proto__,函数有protoType，
+（爸爸的父亲等于妈妈的老公？？）</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog-demo/assets/js/app.1d89a26a.js" defer></script><script src="/blog-demo/assets/js/2.e056be92.js" defer></script><script src="/blog-demo/assets/js/8.16be45ff.js" defer></script>
+  </body>
+</html>
